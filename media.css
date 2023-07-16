@@ -1,0 +1,270 @@
+/* rem and em do not depend on html font-size in media queries */
+/* instead ,1rem=1em=16px */
+
+/* for small laptop */
+/* below to 1400px */
+
+@media(max-width:88em){
+    .hero{
+          max-width: 120rem;
+    }
+    .heading-primary{
+         font-size: 3.2rem;
+    }
+}
+
+/* for landscape tablets */
+/* below then 1200px */
+
+@media(max-width:75em)
+{
+    html{
+        /* 9px/16px = 56.25% */
+         font-size: 56.25%;
+     }
+
+     .hero{
+         gap: 2.4rem;
+     }
+
+      .hero-text{
+          padding: 0.8rem 2.4rem;
+      }
+
+      .Complete{
+         max-width: 110rem;
+      }
+
+      .offer{
+         max-width: 110rem;
+      }
+
+     .customer-text{
+        padding: 6.4rem 1.8em 1.8rem 1.8rem;  
+  }
+
+  .testimonials{
+     max-width: 100rem;
+     gap: 2rem;
+  }
+
+  .video-text h1{
+    font-size: 2.4rem;
+    color: #f3d9fa;
+}
+  .footer{
+    max-width: 110rem;
+  }
+}
+
+/* for protait tablets */
+ /* below 944px */
+
+ @media (max-width:59em){
+     
+    html{
+        /* 8px/16px = 50% */
+         font-size: 50%;
+     }
+
+     .header{
+          padding: 0 6.4rem;
+     }
+     
+      /* mobile navigation */
+
+      .btn-mobile-nav{
+         display: block;
+      }
+
+      .main-nav{
+         background-color:#fff;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100vh;
+         transform: translateX(100%);
+        
+
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         transition: 0.5s all ease-in-out;
+
+
+          opacity: 0;
+          pointer-events: none;
+          visibility: hidden;
+
+      }
+
+      .nav-open .main-nav{
+          opacity: 1;
+          visibility:visible;
+          pointer-events: auto;
+          transform: translateX(0%);
+        
+      }
+
+      .nav-open .icon-mobile-nav[name="close-outline"]{
+        display: block;
+      }
+        
+      .nav-open .icon-mobile-nav[name="menu-outline"]{
+        display: none;
+      }
+      .main-nav-list{
+          flex-direction: column;
+          gap: 4.8rem;
+      }
+
+      .main-nav-link:link,
+      .main-nav-link:visited{
+
+         font-size: 3rem;
+      }
+   
+ 
+
+
+
+     .hero{
+        padding: 0 1.8rem;
+        grid-template-columns: 1fr;
+        gap: 9.6rem;
+        padding: 0 8rem;
+    }
+   .button{
+      justify-content: center;
+   }
+
+   .custom{
+      justify-content: center;
+   }
+    .hero-text{
+         text-align: center;
+    }
+
+    .hero-img{
+          justify-self: center;
+    }
+     .hero-img img{
+        width: 100%;
+        transition: 0.5s ease-in-out;
+   }
+   .hero-img img:hover{
+        transform:rotate(-15deg);
+   } 
+
+     .hero-text{
+         padding: 0.8rem 3.4rem;
+     }
+
+     .Complete{
+        display: grid;
+        column-gap: 8rem;
+        row-gap: 4.8rem;
+        grid-template-columns: repeat(2,1fr);
+        padding: 0  3.2rem;
+     }
+
+     .offer{
+          grid-template-columns: 1fr;
+          gap: 4.8rem;
+     }
+
+     .offer-text{
+         align-items: center;
+         text-align: justify;
+     }
+
+     .offer .products-pricing{
+        padding: 1.2rem 9.6rem 1.2rem 0;
+        gap: 9.6rem;
+ }
+
+     .offer-img{
+        justify-self: center;
+        padding-left: 5.2rem;
+        transform: rotate(-15deg);
+        transition: 0.3s ease-in-out;
+  } 
+
+     .offer-img img{
+        width: 80%;
+ }
+
+ .testimonials{
+       grid-template-columns: 1fr 1fr;
+       column-gap: 3.2rem;
+       row-gap: 9.6rem;
+ }
+
+ .footer{
+     grid-template-columns: 1fr 1fr;
+ }
+
+ }
+
+
+  /* for small tablets */
+
+  /* below 830px */
+ @media (max-width:52em){
+      html{
+          font-size: 43.75%;
+      }
+
+      .hero-img img{
+           width: 90%;
+      }
+
+      .offer-text{
+         padding: 1.2rem 3.2rem;
+      }
+
+      .offer-img img{
+         width: 75%;
+      }
+
+      .testimonials {
+           grid-template-columns: 1fr;
+           padding: 1.2rem 6.4rem;
+      }
+
+      .video-text p{
+          font-size: 4.4rem;
+      }
+      .video-text h1{
+         font-size: 3.2rem;
+      }
+
+      .footer{
+           padding: 1.2rem 3.2rem;
+      }
+ }
+
+ /* for phones */
+ /* below 548px */
+
+ @media(max-width:35em){
+      html{
+          font-size: 37.5%;
+      }
+
+       .hero{
+          padding: 0 4.8rem;
+       }
+      .Complete{
+         grid-template-columns: 1fr;
+         padding: 2.4rem 8rem;
+      }
+
+      .product-list{
+               padding: 2.4rem  3.2rem;
+               gap: 2.4rem;
+      }
+ }
